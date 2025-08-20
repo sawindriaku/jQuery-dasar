@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery | Codepolitan</title>
+  </head>
+  <body>
+    <h1>JQuery</h1>
+    <p>
+      adalah kumpulan fungsi-fungsi javascript yang berguna untuk memudahkan
+      penulisan kode javascript.
+    </p>
+    <p>
+      jQuery mempunyai fitur seperti menyederhanakandokumen
+      <strong>traversing, event handling, animating, dan interaksi ajax</strong>
+      untuk pengembahngan web secara cepat.
+    </p>
+    <p>manfaat jQuery:</p>
+    <ul>
+      <li>menemukan elemen dalam dokumen HTML,</li>
+      <li>mengubah konten HTML,</li>
+      <li>
+        mendengarkan apa yang dilakukan pengguna dan melakukan tindakan yang
+        sesuai (event listener),
+      </li>
+      <li>membuat animasi konten di halaman,</li>
+      <li>berbicara emlalui jaringan untuk mengambil konten baru. (ajax)</li>
+    </ul>
+    <h3>Document Object Model (DOM)</h3>
+    <p>
+      merupakan sebuah struktur seperti pohon yang dibuat oleh browser sehingga
+      kita dapat dengan cepat menemukan elemen HTML menggunakan Javascript.
+    </p>
+    <img
+      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM.png"
+      alt=""
+      border="1" />
+    <h3>cara memanggil jQuery</h3>
+    <p>
+      panggil file jquery terlebih dahulu dengan menggunakan syntax script,
+      dapat berupa link dari halaman utama jquery atau mengunduh file jquery
+      terlebih dahulu.
+    </p>
+    <p>
+      untuk mengetahui apakah jQuery sudah dimuat atau belum, dapat kita lihat
+      melalui console di browser dengan mengetikan simbol $. bila jQuery telah
+      termuat maka akan menampilkan pesan
+      <strong>ƒ (e,t){return new k.fn.init(e,t)}</strong>
+    </p>
+
+    <hr />
+    <!-- query selector -->
+    <h2>Menggunakan jQuey Selector</h2>
+    <p>
+      digunakan untuk memilih elemen html berdasarkan
+      <strong>nama, id, class, value</strong> atau lainnnya.
+    </p>
+
+    <img
+      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/jquery3.png"
+      border="1"
+      alt="" />
+    <h3>Elemen Selector</h3>
+    <p>contoh syntax => <strong>$('p');</strong></p>
+    <div>
+      <img src="/img/contohjQuery1.png" alt="" />
+      <img src="/img/contohjQuery2.png" alt="" />
+      <img src="/img/hasilContohjQuery.png" alt="" />
+    </div>
+
+    <br />
+    <h3>id selector</h3>
+    <p>elemen tunggal yang bersifat unik.</p>
+    <p>syntax: <strong>$("#sample");</strong></p>
+    <div>
+      <img src="/img/contohSelectorId.png" alt="" />
+      <img src="/img/outputSelectorId.png" alt="" />
+    </div>
+
+    <br />
+    <h3>class selector</h3>
+    <p>syntax: <strong>$(.sample);</strong></p>
+    <div>
+      <img src="/img/contohSelectorClass.png" alt="" />
+      <img src="/img/outputSelectorClass.png" alt="" />
+    </div>
+
+    <hr />
+    <!-- DOM jQuery -->
+    <h2>Bekerja dengan DOM jQuery</h2>
+    <p>pada jQuery terdapat beberapa cara untuk memanipulasi DOM.</p>
+    <h2>Menggunakan - pseudoclass</h2>
+    <h3>jQuery selector - pseudoclass</h3>
+    <p>
+      mencari elemen tertentu di dalam object dengan id yang telah ditentukan.
+      Contohnya: <strong>$("#destination li");</strong>
+    </p>
+    <div>
+      <img src="/img/selectorIdDOM.png" alt="" />
+      <img src="/img/outputSelectorIdDOM.png" alt="" />
+    </div>
+    <br />
+    <h3>mencari elemen child</h3>
+    <p>
+      kita bisa mencari elemen anak atau child dalam object yang memiliki id.
+    </p>
+    <div>
+      <img src="/img/contohChild.png" alt="" />
+      <img src="/img/outputContohChild.png" alt="" />
+    </div>
+    <br />
+    <h3>mencari elemen lebih dari satu</h3>
+    <p>dapat menggunakan tanda koma.</p>
+    <p><strong>$(".iniClass, #iniId");</strong></p>
+    <div>
+      <img src="/img/contohElemen.png" alt="" />
+      <img src="/img/ouputContohElemen.png" alt="" />
+    </div>
+    <br />
+    <h3>memilih elemen pertama atau elemen terakhir</h3>
+    <p>mencari elemen pertama: <strong>$("#iniId li:first");</strong></p>
+    <p>mencari elemen terakhir: <strong>$("#iniId li:last");</strong></p>
+    <div>
+      <img src="/img/cthElemenFirstLast.png" alt="" />
+      <img src="/img/outputCthElemenFirstLast.png" alt="" />
+    </div>
+    <br />
+    <h3>memilih elemen ganjil genap</h3>
+    <p>memilih elemen ganjil: <strong>$("#iniId li:odd")</strong></p>
+    <p>memilih elemen genap: <strong>$("#iniId li:even")</strong></p>
+    <br />
+    <h2>Menggunakan fungsi Traversing</h2>
+    <ul>
+      <li>
+        .first() <br />
+        memilih elemen pertama dari elemen yang dipilih
+      </li>
+      <li>
+        .last() <br />
+        memilih elemen terakhir dari elemen yang dipilih
+      </li>
+      <li>
+        .prev() <br />
+        memilih elemen sebelumnya dari elemen yang dipilih
+      </li>
+      <li>
+        .next() <br />
+        memilih elemen berikutnya dari elemen yang dipilih
+      </li>
+      <li>
+        .children() <br />
+        memilih elemen anak dari elemen yang dipilih
+      </li>
+      <li>
+        .find() <br />
+        memilih elemen anak dan juga elemen-elemen dibawahnya dari elemen yang
+        dipilih
+      </li>
+      <li>
+        .parent() <br />
+        memilih elemen parent dari elemen yang dipilih
+      </li>
+    </ul>
+    <img src="/img/cthFungsiTraverting.png" alt="" />
+    <br />
+    <h3>gambaran DOM</h3>
+    <p>Gambaran DOM ketika kita hanya memilih elemen pertama.</p>
+    <img
+      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM3.png"
+      alt="" />
+    <p>
+      Gambaran DOM ketika kita memilih parent dari elemen, maka akan memilih tag
+      ul.
+    </p>
+    <img
+      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM4.png"
+      alt="" />
+    <p>Gambaran DOM ketika kita memilih anak-anak dari tag ul.</p>
+    <img
+      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM5.png"
+      alt="" />
+    <!-- script jquery -->
+    <script src="/jquery-3.7.1.slim.min.js"></script>
+  </body>
+</html>
