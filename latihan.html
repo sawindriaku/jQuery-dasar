@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>latihan jQuery</title>
+  </head>
+  <body>
+    <h1>Kemana?</h1>
+    <ul class="lokasi">
+      <li class="bandung">Bandung</li>
+      <li class="surabaya">Surabaya</li>
+      <li class="jakarta">Jakarta</li>
+      <!-- <li><input type="text" class="inputan" value="90" /></li> -->
+    </ul>
+    <button>pergi</button>
+
+    <h3></h3>
+
+    <script src="jquery-3.7.1.slim.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("li.bandung").on("click", function () {
+          $("h3").text("Selamat datang di Bandung");
+        });
+        $("li.surabaya").on("click", function () {
+          $("h3").text("Selamat datang di Surabaya");
+        });
+        $("li.jakarta").on("click", function () {
+          $("h3").text("Selamat datang di Jakarta");
+        });
+      });
+    </script>
+  </body>
+</html>

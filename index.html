@@ -7,10 +7,7 @@
   </head>
   <body>
     <h1>JQuery</h1>
-    <p>
-      adalah kumpulan fungsi-fungsi javascript yang berguna untuk memudahkan
-      penulisan kode javascript.
-    </p>
+    <p>adalah kumpulan fungsi-fungsi javascript yang berguna untuk memudahkan penulisan kode javascript.</p>
     <p>
       jQuery mempunyai fitur seperti menyederhanakandokumen
       <strong>traversing, event handling, animating, dan interaksi ajax</strong>
@@ -20,32 +17,17 @@
     <ul>
       <li>menemukan elemen dalam dokumen HTML,</li>
       <li>mengubah konten HTML,</li>
-      <li>
-        mendengarkan apa yang dilakukan pengguna dan melakukan tindakan yang
-        sesuai (event listener),
-      </li>
+      <li>mendengarkan apa yang dilakukan pengguna dan melakukan tindakan yang sesuai (event listener),</li>
       <li>membuat animasi konten di halaman,</li>
       <li>berbicara emlalui jaringan untuk mengambil konten baru. (ajax)</li>
     </ul>
     <h3>Document Object Model (DOM)</h3>
-    <p>
-      merupakan sebuah struktur seperti pohon yang dibuat oleh browser sehingga
-      kita dapat dengan cepat menemukan elemen HTML menggunakan Javascript.
-    </p>
-    <img
-      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM.png"
-      alt=""
-      border="1" />
+    <p>merupakan sebuah struktur seperti pohon yang dibuat oleh browser sehingga kita dapat dengan cepat menemukan elemen HTML menggunakan Javascript.</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM.png" alt="" border="1" />
     <h3>cara memanggil jQuery</h3>
+    <p>panggil file jquery terlebih dahulu dengan menggunakan syntax script, dapat berupa link dari halaman utama jquery atau mengunduh file jquery terlebih dahulu.</p>
     <p>
-      panggil file jquery terlebih dahulu dengan menggunakan syntax script,
-      dapat berupa link dari halaman utama jquery atau mengunduh file jquery
-      terlebih dahulu.
-    </p>
-    <p>
-      untuk mengetahui apakah jQuery sudah dimuat atau belum, dapat kita lihat
-      melalui console di browser dengan mengetikan simbol $. bila jQuery telah
-      termuat maka akan menampilkan pesan
+      untuk mengetahui apakah jQuery sudah dimuat atau belum, dapat kita lihat melalui console di browser dengan mengetikan simbol $. bila jQuery telah termuat maka akan menampilkan pesan
       <strong>ƒ (e,t){return new k.fn.init(e,t)}</strong>
     </p>
 
@@ -57,10 +39,7 @@
       <strong>nama, id, class, value</strong> atau lainnnya.
     </p>
 
-    <img
-      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/jquery3.png"
-      border="1"
-      alt="" />
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/jquery3.png" border="1" alt="" />
     <h3>Elemen Selector</h3>
     <p>contoh syntax => <strong>$('p');</strong></p>
     <div>
@@ -92,19 +71,14 @@
     <p>pada jQuery terdapat beberapa cara untuk memanipulasi DOM.</p>
     <h2>Menggunakan - pseudoclass</h2>
     <h3>jQuery selector - pseudoclass</h3>
-    <p>
-      mencari elemen tertentu di dalam object dengan id yang telah ditentukan.
-      Contohnya: <strong>$("#destination li");</strong>
-    </p>
+    <p>mencari elemen tertentu di dalam object dengan id yang telah ditentukan. Contohnya: <strong>$("#destination li");</strong></p>
     <div>
       <img src="/img/selectorIdDOM.png" alt="" />
       <img src="/img/outputSelectorIdDOM.png" alt="" />
     </div>
     <br />
     <h3>mencari elemen child</h3>
-    <p>
-      kita bisa mencari elemen anak atau child dalam object yang memiliki id.
-    </p>
+    <p>kita bisa mencari elemen anak atau child dalam object yang memiliki id.</p>
     <div>
       <img src="/img/contohChild.png" alt="" />
       <img src="/img/outputContohChild.png" alt="" />
@@ -154,8 +128,7 @@
       </li>
       <li>
         .find() <br />
-        memilih elemen anak dan juga elemen-elemen dibawahnya dari elemen yang
-        dipilih
+        memilih elemen anak dan juga elemen-elemen dibawahnya dari elemen yang dipilih
       </li>
       <li>
         .parent() <br />
@@ -166,20 +139,416 @@
     <br />
     <h3>gambaran DOM</h3>
     <p>Gambaran DOM ketika kita hanya memilih elemen pertama.</p>
-    <img
-      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM3.png"
-      alt="" />
-    <p>
-      Gambaran DOM ketika kita memilih parent dari elemen, maka akan memilih tag
-      ul.
-    </p>
-    <img
-      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM4.png"
-      alt="" />
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM3.png" alt="" />
+    <p>Gambaran DOM ketika kita memilih parent dari elemen, maka akan memilih tag ul.</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM4.png" alt="" />
     <p>Gambaran DOM ketika kita memilih anak-anak dari tag ul.</p>
-    <img
-      src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM5.png"
-      alt="" />
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM5.png" alt="" />
+    <br />
+    <hr />
+    <!-- mainoulasi DOM -->
+    <h2>Manipulasi DOM</h2>
+    <h2>add</h2>
+    <p>Fungsi add, berikut:</p>
+    <h3>.before</h3>
+    <p>digunakan untuk menyisipkan konten tertentu sebelum elemen yang dipilih. Contohnya:</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM6.png" alt="" />
+
+    <h3>.after (tag elemen)</h3>
+    <p>digunakan untuk menyisipkan konten tertentu setelah elemen yang dipilih.</p>
+    <img src="img/domAfter.png" alt="" />
+    <p>dom yang dihasilkan adalah:</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM9.png" alt="" />
+    <br />
+    <h3>.append (tag elemen)</h3>
+    <p>digunakan untuk menyisipkan konten tertentu di dalam elemen yang dipilih dan di letakan dibagian akhir.</p>
+    <img src="img/domAppend.png" alt="" />
+    <p>metode meletakan price di dalam daftar list vacation dan diletakan pada bagian akhir.</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM11.png" alt="" />
+    <br />
+    <h3>.prepend(tag elemen)</h3>
+    <p>digunakan untuk menyisipkan konten tertentu di dalamelemen yang dipilih dan diletakan di awal.</p>
+    <img src="img/domPrepend.png" alt="" />
+    <p>metode prepend akan meletakkan price di dalam daftar list vacation dan diletakkan pada bagian awal.</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/DOM10.png" alt="" />
+    <br />
+    <h2>Alternatif</h2>
+    <p>fungsinya sama seperti add, hanya saja susunan pemekaiannya berbeda.</p>
+    <h3>.insertBefore</h3>
+    <p>fungsinya sama seperti before, digunakkan untuk menyisipkan konten atau elemen html setelah elemen yang dipilih.</p>
+    <p style="border: 1px solid black; padding: 2px"><strong>price.insertBefore($('.vacation'));</strong></p>
+
+    <h3>.insertAfter</h3>
+    <p>fungsinya sama seperti after, digunakkan untuk menyisipkan konten atau elemen html sebelum elemen yang dipilih.</p>
+    <p style="border: 1px solid black; padding: 2px"><strong>price.insertAfter($('.vacation'));</strong></p>
+
+    <h3>.prependTo</h3>
+    <p>fungsinya sama seperti prepend, digunakkan untuk menyisipkan konten atau elemen html di awal elemen yang dipilih.</p>
+    <p style="border: 1px solid black; padding: 2px"><strong>price.prependTo($('.vacation'));</strong></p>
+
+    <h3>.appendTo</h3>
+    <p>fungsinya sama seperti append, digunakkan untuk menyisipkan konten atau elemen html di akhir elemen yang dipilih.</p>
+    <p style="border: 1px solid black; padding: 2px"><strong>price.appendTo($('.vacation'));</strong></p>
+
+    <img src="img/contohDomAlternatif1.png" alt="" />
+    <p>kode diatas sama dengan kode dibawah ini.</p>
+    <img src="img/contohDomAlternatif2.png" alt="" />
+    <p>outputnya:</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/studi.png" alt="" />
+    <br />
+
+    <h2>GET</h2>
+    <p>digunakan untuk mengambil data elemen di jQuery.</p>
+    <ul>
+      <li>
+        <h3>.text</h3>
+        mengembalikan konten teks dari elemenyang dipilih. metode ini mengembalikan semua elemmen yang cocok dan menghapus markup HTML. <br />
+        <img src="img/contohGetText.png" alt="" /> <br />
+        untuk mengetahui teks dari elemen dengan class="surabaya" kita bisa membuka console pada web browser, outpunya: <br />
+        <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/gettext.png" alt="" />
+      </li>
+      <li>
+        <h3>.html</h3>
+        mengembalikan konten elemen yang dipilih (termasuk markup html). <br />
+        <img src="img/contohGetHtml.png" alt="" />
+        <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/gethtml.png" alt="" />
+      </li>
+      <li>
+        <h3>.val</h3>
+        mengembalikan value pada form. <br />
+        <img src="img/contohGetVal.png" alt="" /> <br />
+        kode diatas mengembalikan value dari class="inputan" <br />
+        <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/getval.png" alt="" />
+      </li>
+    </ul>
+
+    <h2>SET</h2>
+    <ul>
+      <li>
+        <h3>.text(konten)</h3>
+        mengatur konten teks dari elemen yang dipilih.
+      </li>
+      <li>
+        <h3>.html(konten)</h3>
+        mengatur konten elemen yang dipilih (markup html).
+      </li>
+      <li>
+        <h3>.val(konten)</h3>
+        menetapkan / mengembalikan value pada form.
+      </li>
+    </ul>
+    <img src="img/contohDomSet.png" alt="" />
+    <p>apabila kita jalankan di browser maka hasilnya:</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/set.png" alt="" />
+    <p>nah, tambahkan metode SET text, html, dan val.</p>
+    <img src="img/contohSetText_html_val.png" alt="" />
+    <p>perhatikan penggunaanmetode SET jQuery dari kode diatas.</p>
+    <img src="img/jqueyMetodeSet.png" alt="" />
+    <p>dari kde tersebut hasil class bandung akan diatur menjadi cimahi, class surabay akan diatur menjadi surabaya dengan menyertakan markup html, serta inputan akan diatur menjadi semarang.</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/set2.png" alt="" />
+
+    <br />
+    <h2>REMOVE</h2>
+    <p>digunakan untuk mengambil data di jQuery.</p>
+    <ul>
+      <li>
+        <h3>.remove()</h3>
+        menghapus elemen dan elemen didalamnya (child).
+      </li>
+      <li>
+        <h3>.empty()</h3>
+        menghapus elemen didalamnya saja.
+      </li>
+      <li>
+        Contohnya: <br />
+        <img src="img/contohRemove.png" alt="" /> <br />
+        hasil dari kode diatas, elemen dengan class bandung akan dihapus dari list, sedangkan elemen dengan class surabaya akan dikosongkan, namunlistnya masih ada. <br />
+        <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/remove.png" alt="" />
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <h2>Event Handler</h2>
+    <p>Semua tindakan pengguna yang berbeda dimana dapat ditanggapi oleh javascript / jQuery disebut event.</p>
+    <p>contohnya:</p>
+    <ol>
+      <li>menggerakkan mouse di atas elemen</li>
+      <li>memilih tombol radio</li>
+      <li>mengklik elemen</li>
+    </ol>
+    <h2>Macam Event Handler</h2>
+    <p>berikut macam event handler:</p>
+    <ul>
+      <li>
+        Mouse Events
+        <ol>
+          <li>click</li>
+          <li>dblclick</li>
+          <li>mouseenter</li>
+          <li>mouseleave</li>
+        </ol>
+      </li>
+      <li>
+        Keyboard Events
+        <ol>
+          <li>keypress</li>
+          <li>keydown</li>
+          <li>keyup</li>
+        </ol>
+      </li>
+      <li>
+        Form Events
+        <ol>
+          <li>submit</li>
+          <li>change</li>
+          <li>focus</li>
+          <li>blur</li>
+        </ol>
+      </li>
+      <li>
+        Document / Window Events
+        <ol>
+          <li>load</li>
+          <li>resize</li>
+          <li>scroll</li>
+          <li>unload</li>
+        </ol>
+      </li>
+    </ul>
+    <br />
+    <hr />
+    <h2>Fitur Effect jQuery</h2>
+    <p>Jenis-jenis fitur effect:</p>
+    <ol>
+      <li>
+        <h3>Tanpa Animasi</h3>
+        <ul>
+          <li>
+            <h5>hide (kecepatan)</h5>
+            digunakan untuk menyembunyikan elemen yang dipilih.
+          </li>
+          <li>
+            <h5>show (kecepatan)</h5>
+            digunakan untuk memunculkan elemen yang dipilih.
+          </li>
+          <li>
+            <h5>toogle (kecepatan)</h5>
+            beralih antara hide dan show, yaitu ketika elemen dalam keadaan muncul / show. maka akan disembunyikan, sedangkan ketikadalam keadaan sembunyi maka akan dimunculkan.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>Animasi Fade</h3>
+        <ul>
+          <li>
+            <h5>fadeIn (kecepatan)</h5>
+            digunakan untuk memunculkan elemen yang dipilih dengan efek transisi yaitu muncul secara perlahan.
+          </li>
+          <li>
+            <h5>fadeOut (kecepatan)</h5>
+            digunakan untuk menyembunyikan elemen yang dipilih dengan efek transisi yaitu disembunyikan secara perlahan.
+          </li>
+          <li>
+            <h5>fadeToggle (kecepatan)</h5>
+            beralih antara metode fadeIn() dan fadeOut().
+          </li>
+          <li>
+            <h5>fadeTo (kecepatan)</h5>
+            memberikan efek opacity / transparansi suatu elemen.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>Animasi Slide</h3>
+        <ul>
+          <li>
+            <h5>slideDown (kecepatan)</h5>
+            memunculkan elemen yang dipilih dengan efek slide ke bawah.
+          </li>
+          <li>
+            <h5>slideUp (kecepatan)</h5>
+            menyembunyikan elemen yang dipilih dengan efek slide ke atas.
+          </li>
+          <li>
+            <h5>slideToggle (kecepatan)</h5>
+            gabungan antara pada elemen yang dipilih.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>Animasi via CSS</h3>
+        <ul>
+          <li>
+            <h5>animate (kecepatan)</h5>
+            menjalankan animasi pada elemen yang dipilih.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h3>Contoh Penggunaanya:</h3>
+    <img src="img/cthPenggunaanFunction.png" alt="" /><img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/event2.png" alt="" />
+
+    <br />
+    <ol>
+      <li>
+        <h3>Contoh hide</h3>
+        <div>
+          <img src="img/cthHide.png" alt="" />
+          <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/effect2.png" alt="" />
+          <p>Ketika tombol H diklik maka Bandung akan disembunyikan dari daftar, namun di DOM masih ada.</p>
+          <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/effect3.png" alt="" />
+        </div>
+      </li>
+      <li>
+        <h3>Contoh fadeOut</h3>
+        <div>
+          <img src="img/fadeOut.png" alt="" />
+          <p>untuk mengatur kecepatan dari efek transisi, kita bisa menambahkan jumlah kecepatan (dengan satuan mili second) seperti:</p>
+          <img src="img/fadeOut2.png" alt="" />
+        </div>
+      </li>
+      <li>
+        <h3>Contoh slideUp</h3>
+        untuk menyembunyikan Bandung dari daftar dengan efek slide ke atas, bisa menggunakan slideUp:
+        <div>
+          <img src="img/slideUp.png" alt="" />
+        </div>
+      </li>
+      <li>
+        <h3>Contoh toggle</h3>
+        untuk menyembunyikan dan memunculkan suatu elemen juga dapat menggunakan toggle. Misalnya ingin membuat tombol untuk menyembunyikan dan memunculkan kembali elemen dari daftar.
+        <div>
+          <img src="img/togle1.png" alt="" />
+          <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/toggle.png" alt="" /> <br />
+          untuk memberikan respon terhadap tombol toggle, tambahkan script jQuery. <br />
+          <img src="img/togle2.png" alt="" /><br />
+          sehingga kode lengkapnya: <br />
+          <img src="img/togle3.png" alt="" />
+        </div>
+      </li>
+      <li>
+        <h3>Contoh fadeToggle</h3>
+        untuk memberikan efek transisi dapat di ubah ke fadeToggle.
+        <div>
+          <img src="img/fadeToggle1.png" alt="" />
+        </div>
+      </li>
+      <li>
+        <h3>Contoh slideToggle</h3>
+        untuk memberikan efek slide ke atas (untuk menyemmbunyikan) dan kebawah (untuk menampilkan) kita juga bisa mengubahnya menjadi slideToggle.
+        <div>
+          <img src="img/slideToggle.png" alt="" />
+        </div>
+      </li>
+      <li>
+        <h3>Contoh animate</h3>
+        untuk memberikan efek animasi dengan mengubahnya menjadi animate.
+        <div>
+          <img src="img/animate.png" alt="" />
+          <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/effect4.png" alt="" />
+        </div>
+      </li>
+    </ol>
+
+    <br />
+    <hr />
+    <h2>Manipulasi CSS di jQuery</h2>
+    <h5>beberapa FItur Effect yang disediakan:</h5>
+    <ul>
+      <li>
+        <h3>addClass (namaclass)</h3>
+        digunakan untuk menambahkan satu atau lebih class ke elemen yang dipilih.
+      </li>
+      <li>
+        <h3>removeClass (namaclass)</h3>
+        digunakan untuk menghapus satu atau lebih class dari elemen yang dipilih.
+      </li>
+      <li>
+        <h3>toggleClass (namaclass)</h3>
+        beralih antara menambahkan atau menghapus class dari elemen yang dipilih.
+      </li>
+      <li>
+        <h3>css (css dalam bentuk object)</h3>
+        menetapkan atau mengembalikan atribut style.
+      </li>
+    </ul>
+    <h2>contoh penggunaanya</h2>
+    <img src="img/cthPenggunaanCss.png" alt="" />
+    <p>outpunya:</p>
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/css.png" alt="" />
+    <p>kita juga dapat menambahkan sebuah tombol untuk mengubah warna class bandung menjadi biru.</p>
+    <img src="img/cthPenggunaanCss2.png" alt="" /><br />
+    outpunya: <br />
+    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/css2.png" border="1" alt="" />
+    <br />
+    contoh memperbesar font atau teks: <br />
+    <img src="img/cthPenggunaanCss3.png" alt="" />
+    <br>
+    <hr>
+
+    <h2>Penggunaan Library jQuery</h2>
+    <p>biasanya pilihan library yang biasa digunakan: <h5>autocomplete, button, accordion, dll.</h5> <br>Berikut contoh library jQuery.</p>
+    <ul>
+      <li>
+        <h3>Autocomplete</h3>
+        <p>untuk mencoba autocomplete, bisa mengikuti  https://jqueryui.com/ . contoh penggunaannya dapat membuka "Autocomplete" pada menu Widgets.</p>
+        <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/autocomplete.png" border="1" alt="">
+        <p>Pada autocomplete, ketika kita mengetikkan suatu kata kunci. Maka kata kunci yang cocok dengan data yang disediakan akan muncul secara otomatis. <br> Biasanya source code yang disediakan untuk mmenjalankan autocomplete terdiri dari 3 elemen, yaitu file css dan js yang harus dimuat, juga kode html dan jQuery untuk memuat data.</p>
+        <h5>file css dan js yang harus dimuat.</h5>
+        <img src="img/filecssdanjs.png" alt="">
+        <h5>kode jQuery</h5>
+        <img src="img/kodejQuery.png" alt="">
+        <h5>kode html.</h5>
+        <img src="img/kodehtml.png" alt="">
+        <p>ketika kita coba pada server dan ketik kata kunci, maka akan muncul data yang sesuai dengan kata kunci tersebut.</p>
+        <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/autocomplete2.png" alt="">
+      </li>
+      <li>
+        <h3>jQuery Slick</h3>
+        <p>Dapat memasang <strong>slider</strong>, dapat melakukan browsing dengan kata kunci <strong>jQuery slick</strong> pada aplikasi pencarian. <a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p>
+        <p>berikut langkah-langkah menggunakan jQuery slick sesuai usage:</p>
+        <ol>
+          <li><h5>siapkan markup html</h5> langkahn pertama adalah menyiapkan markup html, lalu simpan dengan nama slick.html <br>
+            <img src="img/langkah1.png" alt="">
+          </li>
+          <li><h5>pindahkan folder slick ke folder aplikasi</h5> untuk memindahkan folder slick tersebut, kita harus mengunduhnya terlebih dahulu. Klik menu <strong>get it now</strong> untuk mengunduhnya.
+            <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/slick.png" alt=""> <br>
+            ketika halaman <strong>download</strong> terbuka, kemudian klik tombol <strong>download now</strong> <br>
+            <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/slick2.png" alt=""><br>
+            setelah berhasil diunduh, ekstrak file kemudian copy ke projek. Filenya berisi css dan js.
+          </li>
+          <li><h5>tambahkan slick.css di bagian head</h5>
+          <img src="img/langkah3.png" alt="">
+          <br> **tambahkan slick.js  sebelum tag penutup body** <br>
+          <img src="img/langkah4.png" alt="">
+        </li>
+        <li><h5>inisialisasi slider di script</h5>
+          inisialisasi slider setelah memuat js. <br>
+          <img src="img/langkah5.png" alt=""> <h4>outputnya:</h4>
+          <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/slick3.png" alt=""><br>
+          kita bisa menggeser konten ke kiri dan ke kanan.
+        </li>
+        </ol>
+      </li>
+      <li>
+        
+        <h3>Popup</h3>
+        <p>selain slider, kita juga bisa menggunakan popup. contohnya: <a href="https://dev.vast.com/jquery-popup-overlay/" target="_blank">https://dev.vast.com/jquery-popup-overlay/</a></p>
+        <h5>download plugin popup</h5>
+        <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/popup.png" alt="">
+        <p>setelah download, ekstrak folder kemdian copy kedalam project untuk mempermudah pengembangan.</p>
+        <br>
+        <p>untuk menjalankan popup, dapat mengikuti dokumentasi / usage yang ada di web.</p>
+        <img src="img/popup1.png" alt="">
+        <img src="img/popup2.png" alt="">
+        <h4>outputnya:</h4>
+        <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/courses/basic-jquery/images/popup4.png" alt="">
+      </li>
+    </ul>
+    
+
     <!-- script jquery -->
     <script src="/jquery-3.7.1.slim.min.js"></script>
   </body>
